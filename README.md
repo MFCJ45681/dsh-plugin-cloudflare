@@ -7,6 +7,8 @@
 
 让 DSH 连上 Cloudflare：设置页里一个配置分节 + `cloudflare_*` 工具，走 **OAuth 授权码 + PKCE**，令牌用 AES-256-GCM 加密存在本机。不写代码也能看懂的部分见 [DESIGN.md](./DESIGN.md)。
 
+本项目基于 [MIT 协议](./LICENSE)开源。
+
 ## 它做什么
 
 | 能力 | 形态 |
@@ -137,3 +139,13 @@ POST /plugins/cloudflare/preferences  改上面的偏好
 
 已实现：OAuth 授权 + 凭据库 + 9 个只读工具 + 设置页。
 未实现（见 DESIGN.md 分期）：DNS 写、缓存清理、Workers/KV/R2/D1、API Token 降级通道。
+
+## 许可证
+
+本项目基于 **MIT 协议**开源，全文见 [LICENSE](./LICENSE)。
+
+简单说：你可以自由使用、修改、分发、商用这份代码，包括闭源集成；唯一要求是保留版权声明与许可证原文。软件按「现状」提供，不附带任何担保。
+
+```
+MIT License · Copyright (c) 2026 MFCJ45681
+```

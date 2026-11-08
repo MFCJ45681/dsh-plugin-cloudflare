@@ -1,0 +1,61 @@
+{
+  "name": "dsh-plugin-cloudflare",
+  "version": "0.1.0",
+  "description": "Connect Cloudflare to DeepSeek Harness: OAuth 2.0 + PKCE sign-in, an AES-256-GCM encrypted credential vault, cloudflare_* agent tools (accounts, zones, DNS records) and a settings section.",
+  "keywords": [
+    "dsh-plugin",
+    "dsh",
+    "deepseek-harness",
+    "cloudflare",
+    "cloudflare-api",
+    "oauth",
+    "pkce",
+    "dns",
+    "zones",
+    "infrastructure"
+  ],
+  "homepage": "https://github.com/MFCJ45681/dsh-plugin-cloudflare#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MFCJ45681/dsh-plugin-cloudflare.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MFCJ45681/dsh-plugin-cloudflare/issues"
+  },
+  "author": "MFCJ45681",
+  "type": "commonjs",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md",
+    "DESIGN.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  },
+  "scripts": {
+    "doctor": "node scripts/doctor.js",
+    "test": "node --test test/*.test.js"
+  }
+}

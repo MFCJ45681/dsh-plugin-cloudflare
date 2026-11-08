@@ -1,0 +1,7 @@
+# Patch layer for dsh-plugin-cloudflare.
+# Registers the host half as a cordis Loader entry. The browser half is discovered
+# through this package's `dsh.client` declaration and served at
+# /plugins/dsh-plugin-cloudflare/client.js.
+- insert:
+    - id: 'dsh-plugin-cloudflare'
+      name: 'dsh-plugin-cloudflare'

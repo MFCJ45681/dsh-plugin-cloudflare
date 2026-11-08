@@ -1,0 +1,17 @@
+node_modules/
+*.log
+
+# Credential material must never be committed: the vault holds OAuth tokens and
+# master.key decrypts it.
+vault.json
+master.key
+callback.log
+
+# Local scratch output (rendered previews, probe helpers).
+preview.html
+preview/
+tmp/
+
+.DS_Store
+.idea/
+.vscode/
